@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Subscription</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Edit Subscription {{ sub_id }}</h1>
+        <form action="{{ url_for('admin.edit_subscription', sub_id=sub_id) }}" method="post">
+            <div class="mb-3">
+                <label for="expires_at" class="form-label">Expires At</label>
+                <input type="text" class="form-control" id="expires_at" name="expires_at" value="{{ expires_at }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</body>
+</html>

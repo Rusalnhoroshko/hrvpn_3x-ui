@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriptions</title>
+</head>
+<body>
+    <h1>All Subscriptions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User ID</th>
+                <th>Key ID</th>
+                <th>Access URL</th>
+                <th>Expires At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sub in subscriptions %}
+            <tr>
+                <td>{{ sub.id }}</td>
+                <td>{{ sub.user_id }}</td>
+                <td>{{ sub.key_id }}</td>
+                <td>{{ sub.access_url }}</td>
+                <td>{{ sub.expires_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
